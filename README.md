@@ -93,9 +93,11 @@ snprintf(funcdata, SBUFF, "Trying r = %lu\n", r);
 
 Sometimes your program takes a bit longer, but keep this rule in mind: if it is taking too long, change your algorithm, change the paradigm, change the way you are thinking the whole thing! There is surely a better, faster way!
 
+![Congratulations!](https://i.imgur.com/uaOGzTP.png)
 
 ## Good luck!
 
+![Please don't share solutions](https://i.imgur.com/ChH3As2.png)
 
 # Author & License
 
