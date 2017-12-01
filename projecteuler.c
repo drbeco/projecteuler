@@ -49,7 +49,7 @@ void startmain(const char *s)
 void startfunc(const char *s)
 {
     strcpy(funcname, s);
-    sprintf(funcdata, "Starting.\n");
+    snprintf(funcdata, SBUFF, "Starting.\n");
     raise(SIGINT);
 }
 

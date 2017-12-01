@@ -55,7 +55,7 @@ void PEN(void)
     startfunc(__PRETTY_FUNCTION__);
 
     /* put this command inside a loop to get previews when pressing CTRL-C */
-    /* sprintf(funcdata, "Trying r = %lu\n", r); */
+    /* snprintf(funcdata, SBUFF, "Trying r = %lu\n", r); */
 
     printf("%s: %lu\n", __FUNCTION__, r); /* answer */
     return;
