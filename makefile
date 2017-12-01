@@ -265,9 +265,10 @@ tags :
 
 # Gera um novo peN
 euler :
-	-cp peN.c pe$(N).c
-	-sed -i 's/PEN.c   /$(PENAME)/' pe$(N).c
-	-sed -i 's/PEN pe ## N/PEN pe ## $(N)/' pe$(N).c
+	@cp -i peN.c pe$(N).c
+	@sed -i 's/PEN.c   /$(PENAME)/' pe$(N).c
+	@sed -i 's/PEN pe ## N/PEN pe ## $(N)/' pe$(N).c
+	@echo "pe$(N).c"
 
 #* ------------------------------------------------------------------- *
 #* makefile config for Vim modeline                                    *
