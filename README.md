@@ -34,11 +34,18 @@ Providing quality problems for entertainment and educational purposes will conti
 * To create your first exercise using `make`. Suppose you are programming exercise number 1154. Then do:
     - make euler N=1154
 
-This will copy and correct automatically the name of the exercise. It would be the same as manually do:
+This will copy and correct automatically the name of the exercise to a new file:
+
+```
+pe1154.c
+```
+
+where you will create your master piece to solve problem number 1154!
 
 * What now?
 
-    - Don't change _anything_ in function `main()`. Let it there as is. Your project starts in the function `PEN()` bellow `main()`.
+    - Open the file `pe1154.c` with your preferred editor (`vim`, of course ;)
+    - Don't change _anything_ in function `main()`. Let it there as it is. Your project starts in the function `PEN()` bellow `main()`.
     - Immediately before function `PEN()`, copy and paste as a comment the _Project Euler Question Text_, that is, the **description** of the problem you need to solve.
     - Go for it! You can write your code all inside `PEN()` or create bellow it as many auxiliary functions as you need.
 
