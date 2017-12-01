@@ -84,7 +84,7 @@ $ make pe1154.x SRC=projecteuler.c MAJOR=4 MINOR=2 FORTIFY=0
 When running, your program will capture CTRL-C to print useful information. You can put anything you want printed inside the variable `funcdata[SBUFF]`. Just add this command inside some `loop` and it will update you when you hit CTRL-C:
 
 ```
-sprintf(funcdata, "Trying r = %lu\n", r);
+snprintf(funcdata, SBUFF, "Trying r = %lu\n", r);
 ```
 
 ## One minute rule
