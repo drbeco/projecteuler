@@ -49,11 +49,15 @@ int main(void)
 
 void PEN(void)
 {
+    /* local variables */
     ulong r=0; /* answer */
-    /* startfunc(__PRETTY_FUNCTION__); */    
 
-    /* answer */
-    printf("%s: %lu\n", __FUNCTION__, r);
+    startfunc(__PRETTY_FUNCTION__);
+
+    /* put this command inside a loop to get previews when pressing CTRL-C */
+    /* sprintf(funcdata, "Trying r = %lu\n", r); */
+
+    printf("%s: %lu\n", __FUNCTION__, r); /* answer */
     return;
 }
 
