@@ -79,6 +79,24 @@ $ make pe1154.x SRC=projecteuler.c MAJOR=4 MINOR=2 FORTIFY=0
         + If you want a char, then: `D="SOMETHING=\'A\'"`
     - To see more options, `vi makefile` and look the variables there.
 
+## Keep track
+
+When running, your program will capture CTRL-C to print useful information. You can put anything you want printed inside the variable `funcdata[SBUFF]`. Just add this command inside some `loop` and it will update you when you hit CTRL-C:
+
+```
+sprintf(funcdata, "Trying r = %lu\n", r);
+```
+
+## One minute rule
+
+* Exercises in Project Euler are carefully created to have a correct answer calculated by a good program under ONE MINUTE!
+
+Sometimes your program takes a bit longer, but keep this rule in mind: if it is taking too long, change your algorithm, change the paradigm, change the way you are thinking the whole thing! There is surely a better, faster way!
+
+
+## Good luck!
+
+
 # Author & License
 
 * This document and templates were created by:
