@@ -37,19 +37,19 @@
 
 /* ---------------------------------------------------------------------- */
 /* prototypes */
-void PEN(void); /* Proj. Euler exercise #PEN */
+void PEN(void); /* Proj. Euler problem #PEN */
 
 /* ---------------------------------------------------------------------- */
 /* main function */
 int main(void)
 {
     startmain(__PRETTY_FUNCTION__);
-    PEN(); /* Proj. Euler exercise #PEN */
+    PEN(); /* Proj. Euler problem #PEN */
     return EXIT_SUCCESS;
 }
 
 /* ---------------------------------------------------------------------- */
-/* Proj. Euler exercise #PEN */
+/* Proj. Euler problem #PEN */
 /* Exercise description:
  *
  */
