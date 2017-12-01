@@ -268,6 +268,7 @@ euler :
 	@cp -i peN.c pe$(N).c
 	@sed -i 's/PEN.c   /$(PENAME)/' pe$(N).c
 	@sed -i 's/PEN pe ## N/PEN pe ## $(N)/' pe$(N).c
+	@sed -i 's/Proj. Euler problem #PEN/Proj. Euler problem #$(N)/' pe$(N).c
 	@echo "pe$(N).c"
 
 #* ------------------------------------------------------------------- *
