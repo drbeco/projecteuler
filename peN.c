@@ -26,23 +26,30 @@
  *   Phone: +55 (81) 3184-7555                                             *
  ***************************************************************************/
 
+/* ---------------------------------------------------------------------- */
+/* includes */
 #include "projecteuler.h"
 
+/* ---------------------------------------------------------------------- */
+/* defines */
 /* Project Euler Exercise Number */
 #define PEN pe ## N
 
-void PEN(void);
+/* ---------------------------------------------------------------------- */
+/* prototypes */
+void PEN(void); /* Proj. Euler exercise #PEN */
 
 /* ---------------------------------------------------------------------- */
 /* main function */
 int main(void)
 {
     startmain(__PRETTY_FUNCTION__);
-    PEN();
+    PEN(); /* Proj. Euler exercise #PEN */
     return EXIT_SUCCESS;
 }
 
 /* ---------------------------------------------------------------------- */
+/* Proj. Euler exercise #PEN */
 /* Exercise description:
  *
  */
