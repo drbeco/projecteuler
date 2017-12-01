@@ -28,8 +28,8 @@
 
 #include "projecteuler.h" 
 
+/* ---------------------------------------------------------------------- */
 /* globals */
-char funcname[SBUFF]="", funcdata[SBUFF]=""; /* info to print when interrupted by signal */
 volatile sig_atomic_t oneminute=0;
 
 /* ---------------------------------------------------------------------- */

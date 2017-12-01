@@ -80,6 +80,10 @@ typedef unsigned int uint;
         mfor_inc=(mfor_loop?(-1*sinal(mfor_inc)*(abs(mfor_inc)+1)):0), mfor_val+=mfor_inc)*/
     
 /* ---------------------------------------------------------------------- */
+/* globals */
+char funcname[SBUFF], funcdata[SBUFF]; /* info to print when interrupted by signal */
+
+/* ---------------------------------------------------------------------- */
 /* prototypes */
 void startmain(const char *s);
 void startfunc(const char *s);
