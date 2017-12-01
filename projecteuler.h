@@ -90,9 +90,8 @@ void quitproc(); /* ctrl-\ */
 void oneminuterule(); /* one minute rule */
 
 /* math auxiliary functions */
-ulong nextprime(ulong a); /* next prime after a given number a */
-ulong mdc(ulong a, ulong b); /* gcd greatest common divisor */
-ulong mmc(ulong a, ulong b); /* lcm minimum common multiplier */
+
+/* ... your functions here */
 
 #endif
 
