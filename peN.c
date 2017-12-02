@@ -50,7 +50,7 @@ int main(void)
 
 /* ---------------------------------------------------------------------- */
 /* Proj. Euler problem #PEN */
-/* Exercise description:
+/* Problem description:
  *
  */
 
