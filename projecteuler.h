@@ -47,8 +47,6 @@ typedef unsigned int uint;
 
 /* ---------------------------------------------------------------------- */
 /* definitions */
-#define sinal(i) ((i)<0?-1:1)
-#define abs(i) (sinal(i)*(i))
 
 #ifndef VERSION /* gcc -DVERSION="0.1.160612.142306" */
 #define VERSION "20171130.203448" /* Version Number (string) */
