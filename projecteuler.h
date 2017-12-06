@@ -39,6 +39,12 @@
 #include <unistd.h>
 #include <gmp.h>
 #include <limits.h>
+#include <time.h>
+#include <pthread.h>
+#include <stdbool.h>
+#include <error.h>
+#include <errno.h>
+#include <stdarg.h>
 
 /* ---------------------------------------------------------------------- */
 /* typedefs */
@@ -79,17 +85,18 @@ typedef unsigned int uint;
     
 /* ---------------------------------------------------------------------- */
 /* globals */
-char funcname[SBUFF], funcdata[SBUFF]; /* info to print when interrupted by signal */
+/* char funcname[SBUFF], funcdata[SBUFF]; /1* info to print when interrupted by signal *1/ */
 
 /* ---------------------------------------------------------------------- */
 /* prototypes */
-void startmain(const char *s);
-void startfunc(const char *s);
+void startmain(void);
+/* void startfunc(const char *s); */
+void finishmain(void);
 
-/* Grab Ctrl-C to show info */
-void sigproc(); /* ctrl-c */
-void quitproc(); /* ctrl-\ */
+void sigproc(); /* Grab ctrl-c to show info */
+void quitproc(); /* ctrl-\ to abort cleanly */
 void oneminuterule(); /* one minute rule */
+void ctrlc_printf(char *fmt, ...); /* print only if pressed CTRL-C */
 
 /* math auxiliary functions */
 

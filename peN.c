@@ -43,8 +43,9 @@ void PEN(void); /* Proj. Euler problem #PEN */
 /* main function */
 int main(void)
 {
-    startmain(__PRETTY_FUNCTION__);
+    startmain();
     PEN(); /* Proj. Euler problem #PEN */
+    finishmain();
     return EXIT_SUCCESS;
 }
 
@@ -59,10 +60,8 @@ void PEN(void)
     /* local variables */
     ulong r=0; /* answer */
 
-    startfunc(__PRETTY_FUNCTION__);
-
     /* put this command inside a loop to get previews when pressing CTRL-C */
-    /* snprintf(funcdata, SBUFF, "Trying r = %lu\n", r); */
+    /* ctrlc("%s: Trying now %u\n", __FUNCTION__, r); */
 
     printf("%s: %lu\n", __FUNCTION__, r); /* answer */
     return;

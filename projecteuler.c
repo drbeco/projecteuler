@@ -31,61 +31,104 @@
 /* ---------------------------------------------------------------------- */
 /* globals */
 volatile sig_atomic_t oneminute=0;
+volatile sig_atomic_t CTRLC=0;
 
 /* ---------------------------------------------------------------------- */
 /* grabbing control */
-void startmain(const char *s)
+void startmain(void)
 {
     signal(SIGINT, sigproc);
     signal(SIGQUIT, quitproc);
     signal(SIGALRM, oneminuterule);
     alarm(ONEMINUTE); /* alarm in 1 minute */
     printf("Project Euler version %s\n", VERSION);
-    startfunc(s);
+    printf("Ctrl-C to dump. Ctrl-\\ to abort.\n");
+    /* startfunc("main"); */
+    return;
 }
 
 /* ---------------------------------------------------------------------- */
 /* every function starts beautifully */
-void startfunc(const char *s)
+/* void startfunc(const char *s) */
+/* { */
+/*     strcpy(funcname, s); */
+/*     snprintf(funcdata, SBUFF, "Starting.\n"); */
+/*     raise(SIGINT); */
+    /* return; */
+/* } */
+
+/* ---------------------------------------------------------------------- */
+/* give signals back to owner */
+extern inline void finishmain(void)
 {
-    strcpy(funcname, s);
-    snprintf(funcdata, SBUFF, "Starting.\n");
-    raise(SIGINT);
+    signal(SIGINT, SIG_DFL);
+    signal(SIGQUIT, SIG_DFL);
+    signal(SIGALRM, SIG_DFL);
+    return;
 }
 
 /* ---------------------------------------------------------------------- */
 /* Control-C gives info */
 void sigproc()
 {
-    printf("\nDumping information (ctrl-c). To abort, press ctrl-\\!\n");
-    signal(SIGINT, sigproc); /* so captura o primero Ctrl+c */
-    printf("Func: %s()\n", funcname);
-    printf("Data: %s\n", funcdata);
+    /* int i, er; */
+    /* signal(SIGINT, sigproc); /1* so captura o primero Ctrl+c *1/ */
+    /* er=write(1, "Func: ", 6); */
+    /* for(i=0, er-=5; funcname[i]!='\0' && i<SBUFF && er==1; i++) */
+    /*     er=write(1, &funcname[i], 1); */
+    /* er=write(1, "Data: ", 6); */
+    /* for(i=0, er-=5; funcdata[i]!='\0' && i<SBUFF && er==1; i++) */
+    /*     er=write(1, &funcdata[i], 1); */
+    /* if(er!=1) */
+    /* { */
+    /*     finishmain(); */
+    /*     write(2, "\nError sigproc()\n", 17); */
+    /*     abort(); */
+    /* } */
+    CTRLC=1;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Print only if Control-c is pressed */
+void ctrlc_printf(char *fmt, ...)
+{
+    va_list args;
+    int i=CTRLC;
+   
+    CTRLC=0;
+    if(i)
+    {
+        /* printf("Func: %s", funcname); */
+        va_start(args, fmt);
+        vprintf(fmt, args);
+        va_end(args);
+        sleep(1);
+    }
+    return;
 }
 
 /* ---------------------------------------------------------------------- */
 /* Control-\ ends all */
 void quitproc()
 {                
-    signal(SIGINT, SIG_DFL);
     signal(SIGQUIT, SIG_DFL);
+    signal(SIGINT, SIG_DFL);
     signal(SIGALRM, SIG_DFL);
-    printf("\nctrl-\\ pressed!\n");
-    printf("Func: %s\n", funcname);
-    printf("Data: %s\n", funcdata);
-    printf("Aborting...\n");
-    exit(0);
+    /* (void)write(2,"\nctrl-\\ pressed!\n", 17); */
+    abort();
+    /* printf("\nctrl-\\ pressed!\n"); */
+    /* printf("Func: %s\n", funcname); */
+    /* printf("Data: %s\n", funcdata); */
+    /* printf("Aborting...\n"); */
+    /* exit(0); */
 }
 
 /* ---------------------------------------------------------------------- */
 /* The answer should be ready in just one minute */
 void oneminuterule()
 {
-    oneminute++;
-    if(oneminute==1)
-        printf("---- One minute rule broken ! ----\n");
+    write(1, "\n ---- One minute rule broken ! ----\n", 37);
     alarm(ONEMINUTE);
-    return;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -96,5 +139,4 @@ void oneminuterule()
 /* ---------------------------------------------------------------------- */
 /* vi: set ai et ts=4 sw=4 tw=0 wm=0 fo=croql : C config for Vim modeline */
 /* Template by Dr. Beco <rcb at beco dot cc> Version 20160612.142044      */
-
 
