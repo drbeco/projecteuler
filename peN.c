@@ -61,7 +61,7 @@ void PEN(void)
     ulong r=0; /* answer */
 
     /* put this command inside a loop to get previews when pressing CTRL-C */
-    /* ctrlc("%s: Trying now %u\n", __FUNCTION__, r); */
+    /* ctrlc_printf("%s: Trying now %u\n", __FUNCTION__, r); */
 
     printf("%s: %lu\n", __FUNCTION__, r); /* answer */
     return;

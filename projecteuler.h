@@ -89,16 +89,14 @@ typedef unsigned int uint;
 
 /* ---------------------------------------------------------------------- */
 /* prototypes */
-void startmain(void);
-/* void startfunc(const char *s); */
-void finishmain(void);
-
+void startmain(void); /* grab signals */
+void finishmain(void); /* give back signals */
 void sigproc(); /* Grab ctrl-c to show info */
 void quitproc(); /* ctrl-\ to abort cleanly */
 void oneminuterule(); /* one minute rule */
 void ctrlc_printf(char *fmt, ...); /* print only if pressed CTRL-C */
 
-/* math auxiliary functions */
+/* auxiliary functions */
 
 /* ... your functions here */
 

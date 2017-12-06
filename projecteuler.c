@@ -30,7 +30,7 @@
 
 /* ---------------------------------------------------------------------- */
 /* globals */
-volatile sig_atomic_t oneminute=0;
+/* volatile sig_atomic_t oneminute=0; */
 volatile sig_atomic_t CTRLC=0;
 
 /* ---------------------------------------------------------------------- */
