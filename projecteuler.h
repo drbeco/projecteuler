@@ -1,5 +1,5 @@
  /**************************************************************************
- *   projecteuler.h                           Version 20170112.001402      *
+ *   projecteuler.h                           Version 20230707.174012      *
  *                                                                         *
  *   Project Euler                                                         *
  *   Copyright (C) 2015-2017    by Ruben Carlo Benante                     *
@@ -59,7 +59,7 @@ typedef unsigned int uint;
 /* definitions */
 
 #ifndef VERSION /* gcc -DVERSION="0.1.160612.142306" */
-#define VERSION "20171130.203448" /* Version Number (string) */
+#define VERSION "20230707.174012" /* Version Number (string) */
 #endif
 
 /* Debug */
@@ -104,5 +104,5 @@ void ctrlc_printf(char *fmt, ...); /* print only if pressed CTRL-C */
 
 /* ---------------------------------------------------------------------- */
 /* vi: set ai et ts=4 sw=4 tw=0 wm=0 fo=croql : C config for Vim modeline */
-/* Template by Dr. Beco <rcb at beco dot cc> Version 20160612.142044      */
+/* Template by Dr. Beco <rcb at beco dot cc> Version 20230707.174012      */
 

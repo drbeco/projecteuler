@@ -1,5 +1,5 @@
 /***************************************************************************
- *   myeulerlib.h                             Version 20190817.225147      *
+ *   myeulerlib.h                             Version 20230707.174012      *
  *                                                                         *
  *   My own Proj Euler Lib                                                 *
  *   Copyright (C) 2019         by Ruben Carlo Benante                     *
@@ -46,5 +46,5 @@ void help(void); /**< Prints help information and exit */
 
 /* ---------------------------------------------------------------------- */
 /* vi: set ai et ts=4 sw=4 tw=0 wm=0 fo=croql : C config for Vim modeline */
-/* Template by Dr. Beco <rcb at beco dot cc> Version 20160615.020326      */
+/* Template by Dr. Beco <rcb at beco dot cc> Version 20230707.174012      */
 
