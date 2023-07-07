@@ -26,6 +26,10 @@
  *   Phone: +55 (81) 3184-7555                                             *
  **************************************************************************/
 
+/* *** DO NOT CHANGE THIS FILE *** */
+
+/* ---------------------------------------------------------------------- */
+/* include guard aka pragma once */
 #ifndef _PROJECTEULER_H
 #define _PROJECTEULER_H
 
@@ -95,10 +99,6 @@ void sigproc(); /* Grab ctrl-c to show info */
 void quitproc(); /* ctrl-\ to abort cleanly */
 void oneminuterule(); /* one minute rule */
 void ctrlc_printf(char *fmt, ...); /* print only if pressed CTRL-C */
-
-/* auxiliary functions */
-
-/* ... your functions here */
 
 #endif
 

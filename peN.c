@@ -40,10 +40,11 @@
 void PEN(void); /* Proj. Euler problem #PEN */
 
 /* ---------------------------------------------------------------------- */
-/* main function */
+/* main function: DO NOT CHANGE THIS FUNCTION */
 int main(void)
 {
     startmain();
+    help(); /* optional help message */
     PEN(); /* Proj. Euler problem #PEN */
     finishmain();
     return EXIT_SUCCESS;
