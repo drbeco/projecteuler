@@ -32,7 +32,7 @@ Providing quality problems for entertainment and educational purposes will conti
 ## Usage
 
 * To create your first exercise using `make`. Suppose you are programming exercise number 1154. Then do:
-    - make euler N=1154
+    - make pe1154.c
 
 This will copy and correct automatically the name of the exercise to a new file:
 
